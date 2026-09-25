@@ -42,7 +42,7 @@ flowchart TD
 | **Runtime** | Python 3.12 | Core execution environment |
 | **API Framework** | FastAPI & Uvicorn | High-performance asynchronous REST endpoints |
 | **Data Validation** | Pydantic v2 | Strict schema validation and serialization |
-| **Domain Engine** | Dual-Mode (Local + LLM) | Production-ready AI logic with offline test capability |
+| **Execution Engine** | Dual-Mode (Local + Cloud) | Production-ready logic with offline verification |
 | **Testing** | Unittest & Pytest | Deterministic automated verification suite |
 
 ---
@@ -56,7 +56,7 @@ pdf-rag-chatbot/
 │   ├── api.py           # FastAPI routes and server definitions
 │   ├── config.py        # Environment variables and application settings
 │   ├── models.py        # Pydantic data schemas
-│   └── services/        # Core business and AI automation logic
+│   └── services/        # Core business automation logic
 ├── tests/
 │   ├── __init__.py
 │   └── test_pdf_rag.py   # Automated test suite
@@ -101,7 +101,6 @@ pdf-rag-chatbot/
 4. **Configure environment variables:**
    ```bash
    cp .env.example .env
-   # Edit .env with your configuration if running in live mode
    ```
 
 ---
